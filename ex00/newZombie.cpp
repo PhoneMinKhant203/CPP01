@@ -1,38 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phonekha <phonekha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/04 17:20:01 by phonekha          #+#    #+#             */
-/*   Updated: 2026/05/06 18:13:48 by phonekha         ###   ########.fr       */
+/*   Created: 2026/05/06 18:14:06 by phonekha          #+#    #+#             */
+/*   Updated: 2026/05/06 18:15:52 by phonekha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.h"
 
-void Zombie::announce(void)
+Zombie *Zombie::newZombie(std::string name)
 {
-	std::cout << getName() << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-std::string Zombie::getName()
-{
-	return(this->name);
-}
-
-Zombie::Zombie()
-{
-	this->name = "phonekha";
-}
-
-Zombie::Zombie(std::string name)
-{
-	this->name = name;
-}
-
-Zombie::~Zombie()
-{
-	std::cout << "Zombie: " << getName() << " has been destroyed!" << std::endl;
+	return (new Zombie(name));
 }
