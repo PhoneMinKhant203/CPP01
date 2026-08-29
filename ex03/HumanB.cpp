@@ -14,7 +14,7 @@
 
 void HumanB::attack()
 {
-	if(this->armb->getType().empty())
+	if(!armb)
 	{
 		std::cout << this->name << " doesn't have a weapon" << std::endl;
 		return ;
@@ -28,7 +28,7 @@ void HumanB::setWeapon(Weapon &newweapon)
 	return ;
 }
 
-HumanB::HumanB(std::string name) : name(name)
+HumanB::HumanB(std::string name) : name(name), armb(NULL)
 {
 	return ;
 }
